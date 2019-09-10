@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!--    &lt;!&ndash;引入外部配置文件&ndash;&gt;
+    <properties resource="db.properties"></properties>
+
+
+    &lt;!&ndash;设置别名    简化书写&ndash;&gt;
+    <typeAliases>
+        <package name="com.itdr.pojo"/>
+    </typeAliases>
+
+
+    &lt;!&ndash;配置数据库连接以及事务处理方式&ndash;&gt;
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${db.driver}"/>
+                <property name="url" value="${db.url}"/>
+                <property name="username" value="${db.username}"/>
+                <property name="password" value="${db.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    &lt;!&ndash;加载映射文件&ndash;&gt;
+    <mappers>
+    &lt;!&ndash;    <mapper resource="com/itdr/demo2/mapper/ProductMapper.xml"/>&ndash;&gt;
+
+    <package name="com.itdr.dao.UsersDao.xml"></package>
+    </mappers>-->
+</configuration>
