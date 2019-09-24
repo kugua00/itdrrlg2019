@@ -1,9 +1,11 @@
-package com.itdr.pojo;
+package com.itdr.pojo.vo;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Products {
+public class ProductVO {
+    //图片服务器地址
+    private String imageHost;
 
     private Integer id;
 
@@ -155,5 +157,15 @@ public class Products {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+
+
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
+
 
 }

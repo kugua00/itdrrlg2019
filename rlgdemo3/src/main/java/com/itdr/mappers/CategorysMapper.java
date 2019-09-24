@@ -1,6 +1,6 @@
 package com.itdr.mappers;
 
-import com.alipay.api.domain.Category;
+
 import com.itdr.pojo.Categorys;
 
 import java.util.List;
@@ -18,7 +18,11 @@ public interface CategorysMapper {
 
     int updateByPrimaryKey(Categorys record);
 
-    //根据父id查询所有一级子ID
+    /**
+     * 根据父id查询所有一级子ID
+     * @param pid
+     * @return
+     */
     List<Categorys> selectByParentId(Integer pid);
 
 }

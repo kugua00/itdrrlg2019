@@ -17,6 +17,13 @@ public class Const {
     //失败通用状态码
     public static final  int ERROR = 100;
 
+    public interface Cart{
+        String LIMITQUANTITYSUCCESS = "LIMIT_NUM_SUCCESS";
+        String LIMITQUANTITYFAILED = "LIMIT_NUM_FAILED";
+        Integer CHECK = 1;
+        Integer UNCHECK = 0;
+    }
+
     public enum UsersEnum{
         NEED_LOGIN(2,"需要登录"),
         NO_LOGIN(101,"用户未登录");
@@ -49,6 +56,24 @@ public class Const {
     }
 
 
+    public  enum PaymentPlatformEnum{
+
+        ALIPAY(1,"支付宝"),
+        ALIPAY_FALSE(301,"支付宝预下单失败"),
+        VERIFY_SIGNATURE_FALSE(302,"支付宝验签失败"),
+        VERIFY_ORDER_FALSE(303,"不是本商品的订单"),
+        REPEAT_USEALIPAY(304,"支付宝重复调用"),
+        SAVEPAYMSG_FALSE(305,"支付信息保存失败")
+        ;
+        private  int  code;
+        private String desc;
+        private PaymentPlatformEnum(int code,String desc){
+            this.code=code;
+            this.desc=desc;
+        }
+
+
+/*
     public enum RoleEnum{
         ROLE_ADMIN(0,"管理员"),
         ROLE_CUSTOMER(1,"普通用户");
@@ -60,7 +85,7 @@ public class Const {
         private RoleEnum(int code,String desc){
             this.code = code;
             this.desc = desc;
-        }
+        }*/
 
         public int getCode() {
             return code;

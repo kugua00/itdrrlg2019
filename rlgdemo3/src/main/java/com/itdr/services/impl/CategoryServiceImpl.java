@@ -25,6 +25,8 @@ public class CategoryServiceImpl implements CategoryService {
         if (categoryId == null || categoryId < 0 ){
             return ServerResponse.defeateRS("非法参数");
         }
+
+
         List<Integer> li = new ArrayList<>();
         li.add(categoryId);
         getAll(categoryId,li);
